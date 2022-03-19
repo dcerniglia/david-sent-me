@@ -1,13 +1,11 @@
 const mongoose = require('mongoose');
 
-const DB_URI = 'mongodb+srv://dcerniglia:e9HtDMMM%v^sp031*G@cluster0.ytij9.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
-
+const DB_URI = 'mongodb+srv://dcerniglia:david123@cluster0.g2ktv.mongodb.net/david-sent-me?retryWrites=true&w=majority';
 const connectDB = async () => {
 	try {
 		mongoose.connect(DB_URI, {
-			usenNewUrlParser: true,
-			useUnifiedTopology: true
-		});
+	});
+	console.log('Database connected')
 	}
 	catch (err) {
 		console.error(err.message);

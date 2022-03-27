@@ -40,11 +40,22 @@ davids.forEach((david, i) => {
 	setTimeout(() => {
 		const p = document.createElement('p');
 		p.innerText = david;
-		p.classList.add('name', 'text-4xl', 'font-paytone', 'opacity-10');
+		p.classList.add('name', 'text-4xl', 'font-paytone');
 		container.append(p);
 	}, i * 150);
 });
 
+setTimeout(() => {
+	const names = document.querySelectorAll('.name');
+	names.forEach((n) => {
+		n.classList.add('transition-opacity', 'transition-duration-1000', 'opacity-10')
+	});
+	unhideInput();
+}, 5000);
 
+const unhideInput = () => {
+	const input = document.querySelector('.hidden');
+	input.classList.replace('hidden', 'flex');
+}
 const davidDivs = document.querySelectorAll('.name');
 

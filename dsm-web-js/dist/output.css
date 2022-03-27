@@ -586,6 +586,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: inline-flex;
 }
 
+.hidden{
+  display: none;
+}
+
 .h-screen{
   height: 100vh;
 }
@@ -753,6 +757,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(75 85 99 / var(--tw-text-opacity));
 }
 
+.text-white{
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
 .opacity-30{
   opacity: 0.3;
 }
@@ -811,6 +820,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 }
 
+.ease-in{
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+}
+
 .name {
   display: inline-block;
   padding-top: .5rem;
@@ -820,6 +833,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .hover\:bg-gray-50:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-gray-500:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(107 114 128 / var(--tw-bg-opacity));
 }
 
 .focus\:border-blue-600:focus{

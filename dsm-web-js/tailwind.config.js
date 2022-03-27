@@ -7,7 +7,11 @@ module.exports = {
         DEFAULT: '1rem'
       }
     },
-    extend: {},
+    extend: {
+      fontFamily: {
+        'paytone': ['Paytone One']
+      },
+    },
   },
   plugins: [],
 }

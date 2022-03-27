@@ -1,28 +1,19 @@
 
 
-const button = document.querySelector('a');
 const container = document.querySelector('.container');
-
-button.addEventListener('click', () => {
-	const p = document.createElement('p');
-	p.innerText = 'David';
-	p.classList.add('name');
-	container.append(p);
-});
-
-
 
 
 
 const davids = [
 	'Beckham',
-	'Schwimmer',
-	'Matthews',
 	'Spade',
+	'Schwimmer',
+	'Byrn',
 	'Matthews',
+	'Foley',
 	'Attenborough',
-	'Hassselhoff',
 	'Blain',
+	'Hassselhoff',
 	'Letterman',
 	'Cross',
 	'Bowie',
@@ -32,24 +23,28 @@ const davids = [
 	'Franco',
 	'Gilmour',
 	'Carradine',
+	'Fincher',
 	'Duchovny',
+	'Grohl',
 	'Lee Roth',
 	'Caruso',
 	'Copperfield',
-	'Hyde Pierce',
-	'Byrn',
-	'Fincher',
 	'Navarro',
 	'Arquette',
-	'Mustaine',
+	'Hyde Pierce',
+	'Crosby',
+	'Mustaine'
 ]
 
 davids.forEach((david, i) => {
 	setTimeout(() => {
-	const p = document.createElement('p');
-	p.innerText = david;
-	p.classList.add('name');
-	container.append(p);
-
-	}, i * 1000);
+		const p = document.createElement('p');
+		p.innerText = david;
+		p.classList.add('name', 'text-4xl', 'font-paytone', 'opacity-10');
+		container.append(p);
+	}, i * 150);
 });
+
+
+const davidDivs = document.querySelectorAll('.name');
+

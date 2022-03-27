@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -5,5 +7,5 @@
 .name {
 	display: inline-block;
   padding-top: .5rem;
- 	padding-right: .5rem;
+ 	padding-right: 1rem;
 }

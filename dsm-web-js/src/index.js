@@ -1,42 +1,13 @@
+import { DAVIDS } from "./const.js";
+
 
 
 const container = document.querySelector('.container');
 
 
 
-const davids = [
-	'Beckham',
-	'Spade',
-	'Schwimmer',
-	'Byrn',
-	'Matthews',
-	'Foley',
-	'Attenborough',
-	'Blain',
-	'Hassselhoff',
-	'Letterman',
-	'Cross',
-	'Bowie',
-	'Tennant',
-	'Chapelle',
-	'Lynch',
-	'Franco',
-	'Gilmour',
-	'Carradine',
-	'Fincher',
-	'Duchovny',
-	'Grohl',
-	'Lee Roth',
-	'Caruso',
-	'Copperfield',
-	'Navarro',
-	'Arquette',
-	'Hyde Pierce',
-	'Crosby',
-	'Mustaine'
-]
 
-davids.forEach((david, i) => {
+DAVIDS.forEach((david, i) => {
 	setTimeout(() => {
 		const p = document.createElement('p');
 		p.innerText = david;
@@ -48,7 +19,7 @@ davids.forEach((david, i) => {
 setTimeout(() => {
 	const names = document.querySelectorAll('.name');
 	names.forEach((n) => {
-		n.classList.add('transition-opacity', 'transition-duration-1000', 'opacity-10')
+		n.classList.add('opacity-10')
 	});
 	unhideInput();
 }, 5000);
@@ -56,6 +27,16 @@ setTimeout(() => {
 const unhideInput = () => {
 	const input = document.querySelector('.hidden');
 	input.classList.replace('hidden', 'flex');
+	const submitBtn = document.querySelector('#submit')
+	submitBtn.addEventListener('submit', () => {
+		const formData = new FormData(form)
+		console.log(formData)
+	});
 }
-const davidDivs = document.querySelectorAll('.name');
+
+const form = document.querySelector('form');
+
+const submitForm = () => {
+	console.log(form)
+}
 

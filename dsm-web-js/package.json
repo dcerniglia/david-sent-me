@@ -2,6 +2,7 @@
   "name": "dsm-web-js",
   "version": "1.0.0",
   "description": "",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "watch:tailwind": "npx tailwindcss -i ./src/main.css -o ./dist/output.css --watch",

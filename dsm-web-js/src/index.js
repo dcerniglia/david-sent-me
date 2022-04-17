@@ -1,10 +1,7 @@
 import { DAVIDS } from "./const.js";
 
-
-
 const container = document.querySelector('.container');
-
-
+const form = document.querySelector('form');
 
 
 DAVIDS.forEach((david, i) => {
@@ -28,15 +25,39 @@ const unhideInput = () => {
 	const input = document.querySelector('.hidden');
 	input.classList.replace('hidden', 'flex');
 	const submitBtn = document.querySelector('#submit')
-	submitBtn.addEventListener('submit', () => {
-		const formData = new FormData(form)
-		console.log(formData)
+	//click event works, but submit does not. maybe button has to be in form group?
+	submitBtn.addEventListener('click', () => {
+		console.log('Button pressed!')
+	  postShortUrl();
 	});
 }
 
-const form = document.querySelector('form');
+let input;  
 
-const submitForm = () => {
-	console.log(form)
-}
+window.addEventListener('DOMContentLoaded', ()=> {
+	input = document.querySelector('input'); 
+	console.log('DOM Content has been loaded')
 
+});
+
+const shortUrlEndpoint = 'http://localhost:3333/api/url/short';
+
+const shortUrl = { shortUrl: 'https://www.amazon.com/gp/product/B07RVMZNYR/ref=ox_sc_saved_image_2?smid=A3W1GP4TQNGUVI&psc=1' };
+
+async function postShortUrl() {
+	try {
+		const url = document.querySelector('input').value;
+		console.log(url);
+		await fetch(shortUrlEndpoint, {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify(shortUrl)
+		});
+	
+		let res = res.JSON();
+	} catch(e) {
+		console.log(e);
+	}
+};

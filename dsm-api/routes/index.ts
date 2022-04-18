@@ -1,7 +1,9 @@
 import express, { Router } from 'express';
+import cors from 'cors';
 import { Url } from '../models/Url';
 
 const router: Router = express.Router();
+router.all('*', cors())
 
 router.get('/:code', async (req, res) => {
 	try {

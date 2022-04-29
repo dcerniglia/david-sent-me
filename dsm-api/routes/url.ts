@@ -31,7 +31,7 @@ router.post('/short', cors(corsOptions), async (req, res) => {
 			let url = await Url.findOne({ longUrl });
 
 			if (url) {
-				res.json(url);
+				res.json(url.shortUrl);
 			} else {
 				const shortUrl = baseUrl + '/' + urlCode;
 
@@ -44,7 +44,8 @@ router.post('/short', cors(corsOptions), async (req, res) => {
 
 				await url.save();
 
-				res.json(url);
+				res.status(200);
+				res.json(shortUrl);
 			}
 		} catch (err) {
 			console.error(err);

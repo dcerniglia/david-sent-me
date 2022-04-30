@@ -42,7 +42,7 @@ window.addEventListener('DOMContentLoaded', ()=> {
 
 const shortUrlEndpoint = 'http://localhost:3333/api/url/short';
 
-const shortUrl = { shortUrl: 'https://www.amazon.com/gp/product/B07RVMZNYR/ref=ox_sc_saved_image_2?smid=A3W1GP4TQNGUVI&psc=1' };
+const initialUrl = { longUrl: 'https://wwwon.com/gp/product/B07RVMZNYR/ref=ox_sc_saved_image_2?smid=A3W1GP4TQNGUVI&psc=1' };
 
 async function postShortUrl() {
 	try {
@@ -51,12 +51,11 @@ async function postShortUrl() {
 		await fetch(shortUrlEndpoint, {
 			method: 'POST',
 			headers: {
-				'Content-Type': 'application/json'
+				'Content-Type': 'application/json',
+				'Access-Control-Allow-Origin': 'http://127.0.0.1:5500' 
 			},
-			body: JSON.stringify(shortUrl)
+			body: JSON.stringify(initialUrl)
 		});
-	
-		let res = res.JSON();
 	} catch(e) {
 		console.log(e);
 	}

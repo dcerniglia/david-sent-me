@@ -528,6 +528,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin: auto;
 }
 
+.my-auto{
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
 .mt-6{
   margin-top: 1.5rem;
 }
@@ -598,8 +603,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   flex-direction: column;
 }
 
+.content-center{
+  align-content: center;
+}
+
+.items-start{
+  align-items: flex-start;
+}
+
 .items-center{
   align-items: center;
+}
+
+.items-baseline{
+  align-items: baseline;
 }
 
 .justify-center{
@@ -650,6 +667,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-position: center;
 }
 
+.p-1{
+  padding: 0.25rem;
+}
+
+.p-4{
+  padding: 1rem;
+}
+
+.p-2{
+  padding: 0.5rem;
+}
+
 .px-3{
   padding-left: 0.75rem;
   padding-right: 0.75rem;
@@ -679,6 +708,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   text-align: center;
 }
 
+.align-middle{
+  vertical-align: middle;
+}
+
 .font-paytone{
   font-family: Paytone One;
 }
@@ -691,6 +724,16 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-4xl{
   font-size: 2.25rem;
   line-height: 2.5rem;
+}
+
+.text-8xl{
+  font-size: 6rem;
+  line-height: 1;
+}
+
+.text-6xl{
+  font-size: 3.75rem;
+  line-height: 1;
 }
 
 .font-normal{
@@ -778,6 +821,22 @@ Ensure the default browser behavior of the `hidden` attribute.
 .focus\:outline-none:focus{
   outline: 2px solid transparent;
   outline-offset: 2px;
+}
+
+@media (min-width: 640px){
+  .sm\:mt-6{
+    margin-top: 1.5rem;
+  }
+
+  .sm\:ml-4{
+    margin-left: 1rem;
+  }
+}
+
+@media (min-width: 1024px){
+  .lg\:p-10{
+    padding: 2.5rem;
+  }
 }
 
 @media (min-width: 1280px){

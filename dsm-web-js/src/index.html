@@ -12,16 +12,15 @@
 </head>
 
 <body>
-  <div class="container h-screen flex-flow mt-6 ml-4">
-    <div
-      class="h-1/2 w-10/12  absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 backdrop-blur-sm z-10 justify-center rounded hidden">
-      <div class="flex bg-center">
-        <div class="xl:w-96 flex-col justify-center  text-center m-auto">
-          <form action="">
-            <label for="exampleURL0" class="form-label inline-block mb-2 text-gray-700 ">Shorten Your Link</label>
-            <input type="url" 
-            name="url"
-            class="
+  <div class="container h-screen flex">
+    <div class="davids-container flex-flow items-start text-center sm:mt-6 sm:ml-4 lg:p-10">
+      <div
+        class="h-1/2 w-10/12  absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 backdrop-blur-sm z-10 justify-center rounded hidden">
+        <div class="flex bg-center">
+          <div class="xl:w-96 flex-col justify-center  text-center m-auto">
+            <form action="">
+              <label for="exampleURL0" class="form-label inline-block mb-2 text-gray-700 ">Shorten Your Link</label>
+              <input type="url" name="url" class="
             form-control
             block
             w-full
@@ -38,9 +37,7 @@
             mb-4
             focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
           " id="exampleURL0" placeholder="URL input" />
-            <a href="#_" 
-            id="submit"
-            class="
+              <a href="#_" id="submit" class="
             text-center
             inline-flex 
             items-center 
@@ -59,13 +56,15 @@
             hover:bg-gray-500 
             focus:outline-none 
             focus:shadow-none">
-              Shorten Your Link
-            </a>
-          </form>
+                Shorten Your Link
+              </a>
+            </form>
+          </div>
         </div>
       </div>
     </div>
-    <script src="./index.js" type="module"></script>
+  </div>
+  <script src="./index.js" type="module"></script>
 </body>
 
 </html>

@@ -45,7 +45,7 @@ router.post('/short', cors(corsOptions), async (req, res) => {
 				await url.save();
 
 				res.status(200);
-				res.json(shortUrl);
+				res.json(url.shortUrl);
 			}
 		} catch (err) {
 			console.error(err);
